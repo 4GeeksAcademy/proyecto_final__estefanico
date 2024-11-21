@@ -1,7 +1,7 @@
 from pickle import load
 import streamlit as st
 
-model = load(open("/workspaces/proyecto_final_estefanico./models/random_forest.sav", "rb"))
+model = load(open("/workspaces/proyecto_final__estefanico/models/random_forest.sav", "rb"))
 
 st.markdown(
     """

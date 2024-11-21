@@ -11,7 +11,8 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-model = load(open("/workspaces/proyecto_final_estefanico/models/random_forest.sav", "rb"))
+model = load(open("/workspaces/proyecto_final_estefanico./models/random_forest.sav", "rb"))
+
 
 #Título
 st.markdown(
@@ -59,8 +60,9 @@ st.markdown(
         text-align: center; /* Alineación */
     }
 
-
-
+""",
+unsafe_allow_html=True
+)
 
 
 
@@ -70,12 +72,14 @@ st.markdown(
 
 #Variables
 st.subheader("Región: ")
-st.markdown(
 
+st.markdown(
+    """
+    <style>
     /* Cambiar el color de los botones seleccionados */
     .stRadio > div > div > div > label {
         background-color: #010369; /* Color de fondo de las opciones seleccionadas */
-        border-radius: 5px;
+        
     }
 
     /* Cambiar el color del texto al pasar el mouse por encima */
@@ -87,6 +91,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 region =  st.radio(
     "Seleccione una región ", 
     ['Región de Ñuble',
@@ -121,18 +126,18 @@ st.markdown(
     .stSlider div {
         background-color: ##d9dadb; /* Color de fondo del slider */
         color: #010369; /* Color del texto */
-        font-size: 16px; /* Tamaño del texto */
+        
     }
 
     /* Personalizar el color del track y el botón del slider */
     .stSlider > div > div > div {
         background-color: #fffff; /* Color del track */
-        height: 8px; /* Altura del track */
+        
     }
 
     .stSlider > div > div > input {
         background-color: #010369; /* Color de la barra del slider */
-        width: 20px; /* Ancho del slider */
+    
     }
     </style>
     """,
